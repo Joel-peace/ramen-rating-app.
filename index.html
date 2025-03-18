@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramen Rater</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h3 id="p3">Ramen Rater</h3>
+
+    <!-- Ramen Menu (Images will be added here) -->
+    <div id="ramen-menu"></div>
+
+    <!-- Ramen Details (Updates when clicking a ramen) -->
+    <div id="ramen-detail">
+        <img id="ramen-detail-image" src="placeholder.jpg" alt="Ramen Image">
+        <h2 id="ramen-name">Insert Name Here</h2>
+        <h2 id="ramen-restaurant">Insert Restaurant Here</h2>
+        <p>Rating: <span id="ramen-rating">0</span> / 10</p>
+        <p>Comment: <span id="ramen-comment">No comment yet</span></p>
+    </div>
+
+    <!-- Form to Add New Ramen -->
+    <form id="new-ramen-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Ramen Name" required>
+
+        <label for="restaurant">Restaurant</label>
+        <input type="text" id="restaurant" placeholder="Restaurant Name" required>
+
+        <label for="image">Image URL</label>
+        <input type="text" id="image" placeholder="Image URL" required>
+
+        <label for="rating">Rating</label>  
+        <input type="number" id="rating" placeholder="1-10" min="1" max="10" required>
+
+        <label for="comment">Comment</label>  
+        <input type="text" id="comment" placeholder="Your review" required>
+        
+        <button type="submit" id="submit">Create</button>
+    </form>
+
+    <script src="index.js"></script>  
+</body>
+</html>
