@@ -10,25 +10,28 @@ const ramens = [
 function displayRamens() {                                                                  
     // Get the ramen menu container element
     let ramenMenu = document.getElementById("ramen-menu");
-    console.log
 
     // Loop through the ramens array to display each ramen
-    ramens.forEach(function(ramen) { // for each metod is used to acces the array in this case the images
+    ramens.forEach(function(ramen) { // forEach method is used to access the array in this case the images
         // Create an image element for the ramen
-        const img = document.createElement("img");// This create the image tag     
+        const img = document.createElement("img"); // This creates the image tag     
         img.src = ramen.image;  // Set the image source                            
         img.alt = ramen.name;   // Set the alternative text
         img.width = 80;         // Set the width of the image
         img.height = 80;        // Set the height of the image
 
         // Add a click event listener to show ramen details when clicked
-        img.addEventListener("click", () => handleClick(ramen));
+        img.addEventListener("click", function() {
+            handleClick(ramen); // Properly closed function call
+        });
 
         // Append the image to the ramen menu container
         ramenMenu.appendChild(img);
     });
 }
-displayRamens(); // Call the function to display all existing ramen images                       
+
+displayRamens(); // Call the function to display all existing ramen images
+
 
 // Function to display ramen details when a ramen image is clickedll
 function handleClick(ramen) {
